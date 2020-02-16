@@ -36,7 +36,7 @@ section {
     background-color:#2E86C1;
     background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/01/q3V3Xe3.jpg);
     background-size: 100%;
-    background-repeat: repeat-x;
+    background-repeat: repeat-y;
     background-position:fixed;
     background-position-y: -125px;
 
@@ -45,7 +45,7 @@ section {
 }
 
 .title h1 {
-    font-size: 60px;
+    font-size: 40px;
     color: black;
     
 
