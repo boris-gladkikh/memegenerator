@@ -1,7 +1,7 @@
 window.onload = function(){
     var clipboard = document.getElementById("clipboard");
     var buttonGo =  document.getElementById("gobutton");
-
+   
     // go button event listener
     buttonGo.addEventListener("click",function(event){
         //var clipboard = document.getElementById("clipboard");
@@ -72,6 +72,13 @@ window.onload = function(){
 
 
     })
-
+//add mouse over and click events for the memes themselves, to delete them individually
+ 
 
 }
+
+var existingMeme = document.getElementById("meme");
+
+clipboard.addEventListener("click", function(event) {
+   event.target.remove();
+})
