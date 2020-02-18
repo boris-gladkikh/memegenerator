@@ -1,11 +1,10 @@
 window.onload = function(){
+    var clipboard = document.getElementById("clipboard");
     var buttonGo =  document.getElementById("gobutton");
 
     // go button event listener
-
-    
     buttonGo.addEventListener("click",function(event){
-        var clipboard = document.getElementById("clipboard");
+        //var clipboard = document.getElementById("clipboard");
         
         //create the meme div, add meme class 
         
@@ -21,12 +20,6 @@ window.onload = function(){
         meme.style.backgroundImage = "url(" +  picture + ")";
         meme.style.backgroundPosition = "center center"
         
-
-  
-
-
-
-
         //create vars for input box values
 
         var upperInput = document.querySelector("#upper_text").value.toUpperCase();
@@ -54,8 +47,6 @@ window.onload = function(){
         meme.appendChild(upperText);
         meme.appendChild(lowerText);
         clipboard.appendChild(meme);
-       
-
 
     })
 
@@ -68,11 +59,16 @@ window.onload = function(){
         //loops through divs with "meme"  class, and removes them
         //******does NOT work
 
-        for (var i = 0; i < memesAll.length; i++) {
+       /* for (var i = 0; i < memesAll.length; i++) {
             //console.log(memesAll.length);
             clipboard.removeChild(memesAll[i]);
             
         }
+        */
+
+    while (clipboard.hasChildNodes()){
+        clipboard.removeChild(clipboard.lastChild);
+    }
 
 
     })
