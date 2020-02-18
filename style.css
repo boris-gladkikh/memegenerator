@@ -121,16 +121,13 @@ footer {
     max-height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
-
-   
-   
-    
-  
-    
-    
     margin: 20px;
     position:relative;
 
+}
+
+.meme:hover {
+    opacity: .75;
 }
 
 .innerdiv {
