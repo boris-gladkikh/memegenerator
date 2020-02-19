@@ -9,7 +9,7 @@ window.onload = function(){
         //create the meme div, add meme class 
         
         var meme = document.createElement("div");
-
+       
         meme.classList.add("meme");
 
         //create an image variable and assign it to the bg of the div
@@ -42,11 +42,22 @@ window.onload = function(){
         lowerText.classList.add("innerdiv");
         lowerText.setAttribute("id", "lower");
 
+        //create inner div for hovering X, attach ontop of  meme
+        //how do you  overlay divs without forcing text to  move?
+
+       /* var blackX = document.createElement("div");
+        blackX.classList.add("blackx");
+        blackX.innerText = "X";
+        clipboard.appendChild(blackX); */
+
+
         //now append it all in order to the divs
         
+     
         meme.appendChild(upperText);
         meme.appendChild(lowerText);
         clipboard.appendChild(meme);
+
 
     })
 
@@ -56,29 +67,23 @@ window.onload = function(){
     var memesAll = document.getElementsByClassName("meme");
     buttonClear.addEventListener("click", function(event){
      
-        //loops through divs with "meme"  class, and removes them
-        //******does NOT work
-
-       /* for (var i = 0; i < memesAll.length; i++) {
-            //console.log(memesAll.length);
-            clipboard.removeChild(memesAll[i]);
-            
-        }
-        */
-
     while (clipboard.hasChildNodes()){
         clipboard.removeChild(clipboard.lastChild);
     }
 
-
     })
-//add mouse over and click events for the memes themselves, to delete them individually
  
 
 }
+//add mouse over and click events for the memes themselves, to delete them individually
 
-var existingMeme = document.getElementById("meme");
+//var existingMeme = document.getElementById("meme");
 
 clipboard.addEventListener("click", function(event) {
-   event.target.remove();
+    event.target.parentElement.remove();
 })
+
+
+
+/*  YOU  ARE TRYING TO IMPLEMENT THE BLACK X DIV, FOUND ABOVE LINE 47
+LEARN HOW TO OVERLAY THE DIV WITHOUT PUSHING THE TEXT DIVS */
