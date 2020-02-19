@@ -164,9 +164,10 @@ footer {
     height: 400px;
     max-width: 400px;
     max-height: 400px;
-    margin-left: 50px;
-    position:relative;
-    font-size: 400px;
+    margin-left: 80px;
+    margin-top:0;
+    position:absolute;
+    font-size: 300px;
     font-family: Arial, Helvetica, sans-serif;
     opacity: 0;
     font:white;;
@@ -174,7 +175,7 @@ footer {
 }
 
 .blackx:hover {
-    opacity:.25;
+    opacity:.50;
 }
    
 

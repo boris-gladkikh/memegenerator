@@ -43,18 +43,18 @@ window.onload = function(){
         lowerText.setAttribute("id", "lower");
 
         //create inner div for hovering X, attach ontop of  meme
-        //how do you  overlay divs without forcing text to  move?
+        //how do you  overlay divs without forcing text to  move? --absolute positioning
 
-       /* var blackX = document.createElement("div");
+        var blackX = document.createElement("div");
         blackX.classList.add("blackx");
         blackX.innerText = "X";
-        clipboard.appendChild(blackX); */
 
 
         //now append it all in order to the divs
         
      
         meme.appendChild(upperText);
+        meme.appendChild(blackX);
         meme.appendChild(lowerText);
         clipboard.appendChild(meme);
 
@@ -77,7 +77,6 @@ window.onload = function(){
 }
 //add mouse over and click events for the memes themselves, to delete them individually
 
-//var existingMeme = document.getElementById("meme");
 
 clipboard.addEventListener("click", function(event) {
     event.target.parentElement.remove();
@@ -85,5 +84,3 @@ clipboard.addEventListener("click", function(event) {
 
 
 
-/*  YOU  ARE TRYING TO IMPLEMENT THE BLACK X DIV, FOUND ABOVE LINE 47
-LEARN HOW TO OVERLAY THE DIV WITHOUT PUSHING THE TEXT DIVS */
